@@ -105,7 +105,7 @@ const Game = {
 
 	gameOver() {
 		setTimeout(() => {
-			alert('AAAAAA')
-		}, 100)
+			gameOverScreen.style.display = 'block'
+		}, 400)
 	},
 }
