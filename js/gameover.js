@@ -4,7 +4,7 @@ gameOverScreen.setAttribute("id", "gameOver")
 gameOverScreen.style.width = `${window.innerHeight + 200}px`
 gameOverScreen.style.height = `${window.innerHeight}px`
 gameOverScreen.style.position = "absolute"
-// gameOverScreen.style.display = 'none'
+gameOverScreen.style.display = "none"
 
 gameOverScreen.style.backgroundColor = "black"
 gameOverScreen.style.zIndex = "400"
@@ -21,3 +21,7 @@ restartButton.style.bottom = "50px"
 restartButton.style.right = "100px"
 
 gameOverScreen.appendChild(restartButton)
+
+restartButton.onclick = () => {
+    Game.restart()
+}
