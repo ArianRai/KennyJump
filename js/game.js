@@ -36,7 +36,6 @@ const Game = {
 
 	start() {
 		this.createElements()
-		this.setEventListeners()
 		this.gameLoop()
 	},
 
