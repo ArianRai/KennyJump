@@ -64,7 +64,7 @@ class Level {
 							`#lifes :nth-child(${count})`
 						).style.backgroundImage = 'url(./img/heart_empty.png)'
 						if (this.player.lifesCount === 0) {
-							Game.gameOver()
+							// Game.gameOver()
 						}
 					}
 				}
