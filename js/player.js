@@ -31,6 +31,7 @@ class Player {
 		this.globalFriction = 0.988
 		this.previousLevel = -1
 		this.lifesCount = 3
+		this.maxHeight = 0
 		this.init()
 	}
 	init() {
@@ -131,5 +132,10 @@ class Player {
 	updatePosition() {
 		this.playerElement.style.left = `${this.playerPos.x}px`
 		this.playerElement.style.top = `${this.playerPos.y}px`
+		let currentHeight =
+			this.gameSize.h * this.playerLevel + (this.gameSize.h - this.playerPos.y)
+		if (currentHeight > this.maxHeight) {
+			this.maxHeight = currentHeight
+		}
 	}
 }
