@@ -42,18 +42,18 @@ const Game = {
     },
 
     setEventListeners() {
-        addEventListener('click', (e) => {
-            const clickX = e.clientX
-            const clickY = e.clientY
-            const rect = this.gameScreen.getBoundingClientRect()
-            const divX = rect.left
-            const divY = rect.top
-            const offsetX = clickX - divX
-            const offsetY = clickY - divY
-            this.player.playerPos.x = offsetX
-            this.player.playerPos.y = offsetY
-            this.player.onGround = false
-        })
+        // addEventListener('click', (e) => {
+        //     const clickX = e.clientX
+        //     const clickY = e.clientY
+        //     const rect = this.gameScreen.getBoundingClientRect()
+        //     const divX = rect.left
+        //     const divY = rect.top
+        //     const offsetX = clickX - divX
+        //     const offsetY = clickY - divY
+        //     this.player.playerPos.x = offsetX
+        //     this.player.playerPos.y = offsetY
+        //     this.player.onGround = false
+        // })
 
         addEventListener('keyup', (e) => {
             switch (e.code) {
@@ -100,9 +100,9 @@ const Game = {
     },
 
     createBoard() {
-        let ul = document.createElement('ul')
-        ul.setAttribute('id', 'topPlayers')
-        document.querySelector('#leaderBoard').appendChild(ul)
+        let ol = document.createElement('ol')
+        ol.setAttribute('id', 'topPlayers')
+        document.querySelector('#leaderBoard').appendChild(ol)
 
         for (let i = 0; i < localStorage.length; i++) {
             this.topPlayers.push({
@@ -146,6 +146,8 @@ const Game = {
 
     gameOver() {
         this.setTop()
+        this.cleanBoard()
+        this.createBoard()
         setTimeout(() => {
             gameOverScreen.style.display = 'block'
         }, 200)
