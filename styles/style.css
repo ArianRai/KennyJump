@@ -7,7 +7,19 @@
     position: relative;
     overflow: hidden;
     margin-left: 120px;
-    background-color: green ;
+    background-color: rgb(68, 158, 255) ;
+}
+
+input:focus {
+    outline: none;
+}
+
+#surrenderButton {
+    background-color: white;
+    background-image: url('./../img/Death_Surrender.png');
+    background-size: cover;
+    border: none;
+    cursor: pointer;
 }
 
 #leaderBoard {

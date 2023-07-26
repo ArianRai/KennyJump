@@ -13,9 +13,13 @@ document.body.insertBefore(gameStartScreen, gameScreen)
 
 const nameInput = document.createElement('input')
 
+nameInput.setAttribute('placeholder', 'Introduce tu nombre')
+
 nameInput.style.width = '300px'
 nameInput.style.height = '60px'
 nameInput.style.position = 'absolute'
+//nameInput.style.background = 'transparent'
+nameInput.style.border = 'none'
 nameInput.style.fontSize = '24px'
 nameInput.style.textAlign = 'center'
 
