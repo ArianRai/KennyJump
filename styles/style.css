@@ -1,6 +1,7 @@
 * {
     margin: 0;
-    padding: 0
+    padding: 0;
+    font-size: 20px;
 }
 
 #game-screen {
@@ -10,4 +11,14 @@
     background-color: green ;
 }
 
+#leaderBoard {
+    width: 490px;
+    height: 100vh;
+    background: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#leaderBoard li {
+    margin-top: 12px}
 
