@@ -4,7 +4,8 @@ gameStartScreen.setAttribute('id', 'startscreen')
 gameStartScreen.style.width = `${window.innerWidth}px`
 gameStartScreen.style.height = `${window.innerHeight}px`
 gameStartScreen.style.position = 'absolute'
-gameStartScreen.style.backgroundImage = 'url(./img/KENNY_BG.png)'
+gameStartScreen.style.backgroundImage = 'url(./img/game_start-bg.png)'
+gameStartScreen.style.backgroundPositionY = '-100px'
 gameStartScreen.style.backgroundSize = 'cover'
 gameStartScreen.style.zIndex = '400'
 gameStartScreen.style.display = 'block'
@@ -30,12 +31,12 @@ gameStartScreen.appendChild(nameInput)
 let playerName = 'PLAYER'
 
 addEventListener('keydown', (e) => {
-    switch (e.code) {
-        case 'Enter':
-            gameStartScreen.style.display = 'none'
-            if (nameInput.value) {
-                playerName = nameInput.value
-            }
-            break
-    }
+	switch (e.code) {
+		case 'Enter':
+			gameStartScreen.style.display = 'none'
+			if (nameInput.value) {
+				playerName = nameInput.value
+			}
+			break
+	}
 })
