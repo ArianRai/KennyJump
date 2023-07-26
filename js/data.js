@@ -2,7 +2,6 @@ const levelData = [
     {
         platforms: [
             {
-                //SUELO
                 x: -250,
                 y: Game.gameSize.h - 30,
                 w: Game.gameSize.w + 500,

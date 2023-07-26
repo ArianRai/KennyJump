@@ -6,7 +6,6 @@ class Platform {
             x: positionX,
             y: positionY,
         }
-
         this.size = {
             width: sizeW,
             height: sizeH,
@@ -23,9 +22,7 @@ class Platform {
         this.platformElement.style.height = `${this.size.height}px`
         this.platformElement.style.left = `${this.position.x}px`
         this.platformElement.style.top = `${this.position.y}px`
-        // this.platformElement.style.backgroundColor = `yellow`
-        this.platformElement.style.backgroundImage =
-            'url(./img/Cloud_Platform.png)'
+        this.platformElement.style.backgroundImage = 'url(./img/Cloud_Platform.png)'
         this.platformElement.style.backgroundSize = '100% 100%'
         this.platformElement.style.backgroundPosition = 'center'
 

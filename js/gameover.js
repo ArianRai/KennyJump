@@ -8,10 +8,12 @@ gameOverScreen.style.display = 'none'
 gameOverScreen.style.backgroundColor = 'black'
 gameOverScreen.style.zIndex = '400'
 gameOverScreen.style.marginLeft = '120px'
-let gameScreen = document.querySelector('#game-screen')
+
+const gameScreen = document.querySelector('#game-screen')
 document.body.insertBefore(gameOverScreen, gameScreen)
 
 const restartButton = document.createElement('button')
+
 restartButton.innerText = 'RESTART'
 restartButton.style.width = '300px'
 restartButton.style.height = '80px'

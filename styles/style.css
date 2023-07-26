@@ -13,24 +13,16 @@
 	border-bottom: 0;
 }
 body {
-	background-color: #505050;
+	background-color: rgb(70, 70, 70);
 }
 input:focus {
     outline: none;
 }
 
-#surrenderButton {
-    background-color: white;
-    background-image: url('./../img/Death_Surrender.png');
-    background-size: cover;
-    border: none;
-    cursor: pointer;
-}
-
 #leaderBoard {
     width: 490px;
     height: 100vh;
-    background: #505050;
+    background: rgb(70, 70, 70);
     position: absolute;
     top: 0;
     right: 0;

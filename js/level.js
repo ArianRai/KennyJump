@@ -8,7 +8,6 @@ class Level {
 
         this.init(this.currentLevel)
     }
-    // HOLA
 
     init(currentLevel) {
         this.startLevel(currentLevel)
@@ -18,6 +17,7 @@ class Level {
         if (currentLevel !== this.player.previousLevel) {
             this.clearLevel()
         }
+
         const levelElements = levelData[currentLevel]
         levelElements.platforms.forEach((platform) => {
             this.platforms.push(
@@ -48,27 +48,25 @@ class Level {
 
         this.platforms.forEach((eachPlatform) => {
             let platformLeft = eachPlatform.position.x
-            let platformRight =
-                eachPlatform.position.x + eachPlatform.size.width
+            let platformRight = eachPlatform.position.x + eachPlatform.size.width
             let platformTop = eachPlatform.position.y
-            let platformBottom =
-                eachPlatform.position.y + eachPlatform.size.height
+            let platformBottom = eachPlatform.position.y + eachPlatform.size.height
+
             if (
                 playerRight >= platformLeft &&
                 playerLeft <= platformRight &&
                 playerBottom >= platformTop &&
                 playerTop <= platformBottom
             ) {
-                if (
-                    playerBottom < platformTop + 60 &&
-                    this.player.playerVel.y > 25
-                ) {
+                if (playerBottom < platformTop + 60 && this.player.playerVel.y > 25) {
                     if (this.player.lifesCount > 0) {
                         let count = this.player.lifesCount
                         this.player.lifesCount--
+
                         document.body.querySelector(
                             `#lifes :nth-child(${count})`
-                        ).style.backgroundImage = "url(./img/heart_empty.png)"
+                        ).style.backgroundImage = 'url(./img/heart_empty.png)'
+
                         if (this.player.lifesCount === 0) {
                             Game.gameOver()
                         }
@@ -87,8 +85,7 @@ class Level {
                         this.player.playerVel.y *= -0.6
                     } else {
                         this.player.onGround = true
-                        this.player.playerPos.y =
-                            platformTop - this.player.playerSize.h
+                        this.player.playerPos.y = platformTop - this.player.playerSize.h
                     }
                 } else {
                     if (playerTop !== platformTop - this.player.playerSize.h) {
