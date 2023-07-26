@@ -5,7 +5,7 @@ gameStartScreen.style.width = `${window.innerWidth}px`
 gameStartScreen.style.height = `${window.innerHeight}px`
 gameStartScreen.style.position = "absolute"
 gameStartScreen.style.display = "block"
-gameStartScreen.style.backgroundImage = "url(./img/KENNY_BG.jpg)"
+gameStartScreen.style.backgroundImage = "url(./img/KENNY_BG.png)"
 gameStartScreen.style.backgroundSize = "cover"
 gameStartScreen.style.zIndex = "400"
 
@@ -32,9 +32,11 @@ startGameButton.style.right = `${window.innerWidth * 0.5 - 150}px`
 
 gameStartScreen.appendChild(startGameButton)
 
-let playerName = ""
+let playerName = "PLAYER"
 
 startGameButton.onclick = () => {
     gameStartScreen.style.display = "none"
-    playerName = nameInput.value
+    if (nameInput.value) {
+        playerName = nameInput.value
+    }
 }
