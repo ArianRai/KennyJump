@@ -75,8 +75,8 @@ class Level {
                 playerBottom >= 400 &&
                 playerTop <= 520
             ) {
-                console.log('ENDGAME')
                 setTimeout(() => {
+                    document.body.querySelector('#wii-theme').pause()
                     document.querySelector('#endGame').style.display = 'block'
                     endGameVideo.play()
                 }, 300)
