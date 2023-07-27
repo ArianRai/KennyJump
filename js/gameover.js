@@ -21,6 +21,7 @@ restartButton.style.zIndex = '400'
 restartButton.style.position = 'absolute'
 restartButton.style.bottom = '20px'
 restartButton.style.right = '20px'
+restartButton.style.cursor = 'pointer'
 
 gameOverScreen.appendChild(restartButton)
 
