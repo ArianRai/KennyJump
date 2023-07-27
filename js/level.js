@@ -18,7 +18,7 @@ class Level {
 			this.clearLevel()
 		}
 		const levelElements = levelData[currentLevel]
-		levelElements.platforms.forEach((platform) => {
+		levelElements.platforms.forEach(platform => {
 			this.platforms.push(
 				new Platform(
 					this.gameScreen,
@@ -30,13 +30,32 @@ class Level {
 				)
 			)
 		})
-		document.body.querySelector('#game-screen').style.backgroundImage =
-			levelElements.backGround
-		console.log(levelElements.backGround)
+		if (currentLevel === 4) {
+			this.finishElement = document.createElement('div')
+			this.finishElement.setAttribute('id', 'finish')
+
+			this.finishElement.style.position = 'absolute'
+			this.finishElement.style.width = `200px`
+			this.finishElement.style.height = `120px`
+			this.finishElement.style.left = `${this.gameSize.w / 2 - 100}px`
+			this.finishElement.style.top = `400px`
+			this.finishElement.style.backgroundImage = 'url(./img/wings.png)'
+			this.finishElement.style.backgroundSize = 'cover'
+			this.finishElement.style.backgroundPosition = 'center'
+			this.finishElement.style.zIndex = '201'
+
+			this.gameScreen.appendChild(this.finishElement)
+		} else {
+			if (document.querySelector('#finish')) {
+				document.querySelector('#finish').remove()
+			}
+		}
+
+		document.body.querySelector('#game-screen').style.backgroundImage = levelElements.backGround
 	}
 
 	clearLevel() {
-		this.platforms.forEach((platform) => {
+		this.platforms.forEach(platform => {
 			platform.platformElement.remove()
 		})
 		this.platforms = []
@@ -48,13 +67,21 @@ class Level {
 		let playerTop = this.player.playerPos.y
 		let playerBottom = this.player.playerPos.y + this.player.playerSize.h
 
-		this.platforms.forEach((eachPlatform) => {
+		if (this.currentLevel === 4) {
+			if (
+				playerRight >= this.gameSize.w / 2 - 100 &&
+				playerLeft <= this.gameSize.w / 2 + 200 &&
+				playerBottom >= 400 &&
+				playerTop <= 520
+			) {
+				console.log('GAME FINISHED')
+			}
+		}
+		this.platforms.forEach(eachPlatform => {
 			let platformLeft = eachPlatform.position.x
-			let platformRight =
-				eachPlatform.position.x + eachPlatform.size.width
+			let platformRight = eachPlatform.position.x + eachPlatform.size.width
 			let platformTop = eachPlatform.position.y
-			let platformBottom =
-				eachPlatform.position.y + eachPlatform.size.height
+			let platformBottom = eachPlatform.position.y + eachPlatform.size.height
 
 			if (
 				playerRight >= platformLeft &&
@@ -62,10 +89,7 @@ class Level {
 				playerBottom >= platformTop &&
 				playerTop <= platformBottom
 			) {
-				if (
-					playerBottom < platformTop + 60 &&
-					this.player.playerVel.y > 25
-				) {
+				if (playerBottom < platformTop + 60 && this.player.playerVel.y > 25) {
 					if (this.player.lifesCount > 0) {
 						let count = this.player.lifesCount
 						this.player.lifesCount--
@@ -92,8 +116,7 @@ class Level {
 						this.player.playerVel.y *= -0.6
 					} else {
 						this.player.onGround = true
-						this.player.playerPos.y =
-							platformTop - this.player.playerSize.h
+						this.player.playerPos.y = platformTop - this.player.playerSize.h
 					}
 				} else {
 					if (playerTop !== platformTop - this.player.playerSize.h) {
@@ -101,8 +124,7 @@ class Level {
 						if (playerRight >= platformRight) {
 							this.player.playerPos.x = platformRight
 						} else {
-							this.player.playerPos.x =
-								platformLeft - this.player.playerSize.w
+							this.player.playerPos.x = platformLeft - this.player.playerSize.w
 						}
 					} else {
 						this.player.onGround = false
