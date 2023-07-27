@@ -37,8 +37,9 @@ input:focus {
     background-image: url('./../img/scroll_leaderBoard2.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position-y: 30px ;
-    padding: 50px 180px;
+    background-position-x: 30px;
+    height: 600px;
+    width: 490px;
 }
 
 h1 {
@@ -51,6 +52,7 @@ h3 {
 }
 
 #topPlayers {
+    padding-top: 64px;
 	display: flex;
 		flex-direction: column;
 		justify-content: center;

@@ -168,7 +168,8 @@ const Game = {
 
         setTimeout(() => {
             gameOverScreen.style.display = 'block'
-        }, 200)
+            gameOverVideo.play()
+        }, 300)
     },
 
     restart() {

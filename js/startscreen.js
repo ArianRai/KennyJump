@@ -31,12 +31,12 @@ gameStartScreen.appendChild(nameInput)
 let playerName = 'PLAYER'
 
 addEventListener('keydown', (e) => {
-	switch (e.code) {
-		case 'Enter':
-			gameStartScreen.style.display = 'none'
-			if (nameInput.value) {
-				playerName = nameInput.value
-			}
-			break
-	}
+    switch (e.code) {
+        case 'Enter':
+            gameStartScreen.style.display = 'none'
+            if (nameInput.value) {
+                playerName = nameInput.value
+            }
+            break
+    }
 })
