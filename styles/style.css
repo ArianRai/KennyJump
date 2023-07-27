@@ -23,6 +23,7 @@ input:focus {
     width: 490px;
     height: 100vh;
     background: rgb(70, 70, 70);
+    background-size: cover;
     position: absolute;
     top: 0;
     right: 0;
@@ -30,6 +31,14 @@ input:focus {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+}
+
+#ranking {
+    background-image: url('./../img/scroll_leaderBoard2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 30px ;
+    padding: 50px 180px;
 }
 
 h1 {

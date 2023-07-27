@@ -1,7 +1,7 @@
 const gameOverScreen = document.createElement('div')
 
 gameOverScreen.setAttribute('id', 'gameOver')
-gameOverScreen.style.width = `${window.innerHeight + 200}px`
+gameOverScreen.style.width = `${window.innerHeight + 204}px`
 gameOverScreen.style.height = `${window.innerHeight}px`
 gameOverScreen.style.position = 'absolute'
 gameOverScreen.style.display = 'none'
