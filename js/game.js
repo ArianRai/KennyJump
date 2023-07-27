@@ -170,6 +170,8 @@ const Game = {
             eachLife.style.backgroundImage = 'url(./img/heart_empty.png)'
         })
 
+        document.body.querySelector('#wii-theme').pause()
+
         setTimeout(() => {
             gameOverScreen.style.display = 'block'
             gameOverVideo.play()

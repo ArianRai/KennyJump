@@ -34,6 +34,19 @@ addEventListener('keydown', (e) => {
     switch (e.code) {
         case 'Enter':
             gameStartScreen.style.display = 'none'
+
+            const wiiAudio = document.createElement('audio')
+            wiiAudio.setAttribute('id', 'wii-theme')
+            wiiAudio.loop = true
+            document.body.appendChild(wiiAudio)
+
+            const wiiAudioSrc = document.createElement('source')
+            wiiAudioSrc.setAttribute('src', './audio/wii-theme.mp3')
+            wiiAudioSrc.setAttribute('type', 'audio/mp3')
+            wiiAudio.appendChild(wiiAudioSrc)
+
+            wiiAudio.play()
+
             if (nameInput.value) {
                 playerName = nameInput.value
             }

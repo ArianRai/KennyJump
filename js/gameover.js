@@ -35,7 +35,6 @@ const gameOverVideosArray = [
 ]
 
 let randomGameOverVideoIndex = Math.round(Math.random() * 3)
-let videoRandom = gameOverVideosArray[randomGameOverVideoIndex]
 
 gameOverVideo.setAttribute('id', 'Habeis-matado-a-Kenny')
 gameOverVideo.style.position = 'absolute'
@@ -44,7 +43,7 @@ gameOverVideo.style.height = '100%'
 gameOverScreen.appendChild(gameOverVideo)
 
 const gameOverVideoSrc = document.createElement('source')
-gameOverVideoSrc.setAttribute('src', `${videoRandom}`)
+gameOverVideoSrc.setAttribute('src', `${gameOverVideosArray[randomGameOverVideoIndex]}`)
 gameOverVideoSrc.setAttribute('type', 'video/mp4')
 gameOverVideo.appendChild(gameOverVideoSrc)
 
