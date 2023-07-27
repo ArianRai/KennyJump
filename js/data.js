@@ -1,6 +1,6 @@
 const levelData = [
 	{
-		backGround: `url('./img/ays.jpg')`,
+		// backGround: `url('./img/ays.jpg')`,
 		platforms: [
 			{
 				x: -250,
