@@ -5,7 +5,7 @@ gameStartScreen.style.width = `${window.innerWidth}px`
 gameStartScreen.style.height = `${window.innerHeight}px`
 gameStartScreen.style.position = 'absolute'
 gameStartScreen.style.backgroundImage = 'url(./img/game_start-bg.png)'
-gameStartScreen.style.backgroundPositionY = '-100px'
+// gameStartScreen.style.backgroundPositionY = '-100px'
 gameStartScreen.style.backgroundSize = 'cover'
 gameStartScreen.style.zIndex = '400'
 gameStartScreen.style.display = 'block'
@@ -23,7 +23,7 @@ nameInput.style.position = 'absolute'
 nameInput.style.border = 'none'
 nameInput.style.fontSize = '24px'
 nameInput.style.textAlign = 'center'
-nameInput.style.bottom = `${window.innerHeight * 0.3}px`
+nameInput.style.bottom = `${window.innerHeight * 0.18}px`
 nameInput.style.right = `${window.innerWidth * 0.5 - 150}px`
 
 gameStartScreen.appendChild(nameInput)
