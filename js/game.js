@@ -168,11 +168,6 @@ const Game = {
 	},
 
 	restart() {
-		gameOverScreen.style.display = 'none'
-		document.querySelector('#lifes').remove()
-		document.querySelector('#player').remove()
-		this.level.clearLevel()
-		this.cleanBoard()
-		this.createElements()
+		location.reload()
 	},
 }
