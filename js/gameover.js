@@ -12,15 +12,15 @@ gameOverScreen.style.marginLeft = '120px'
 const gameScreen = document.querySelector('#game-screen')
 document.body.insertBefore(gameOverScreen, gameScreen)
 
-const restartButton = document.createElement('button')
+const restartButton = document.createElement('img')
 
-restartButton.innerText = 'RESTART'
-restartButton.style.width = '300px'
-restartButton.style.height = '80px'
+restartButton.setAttribute('src', './img/restart.png')
+restartButton.style.width = '200px'
+restartButton.style.height = '120px'
 restartButton.style.zIndex = '400'
 restartButton.style.position = 'absolute'
-restartButton.style.bottom = '50px'
-restartButton.style.right = '100px'
+restartButton.style.bottom = '20px'
+restartButton.style.right = '20px'
 
 gameOverScreen.appendChild(restartButton)
 
