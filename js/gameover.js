@@ -24,20 +24,28 @@ restartButton.style.right = '100px'
 
 gameOverScreen.appendChild(restartButton)
 
-// const gameOverVideo = document.createElement('video')
+const gameOverVideo = document.createElement('video')
 
-// gameOverVideo.setAttribute('id', 'Habeis-matado-a-Kenny')
-// gameOverVideo.setAttribute('autoplay', 'true')
-// gameOverVideo.style.position = 'absolute'
-// gameOverVideo.style.width = '100%'
-// gameOverVideo.style.height = '100%'
-// gameOverVideo.style.zIndex = '500'
-// gameOverScreen.appendChild(gameOverVideo)
+const gameOverVideosArray = [
+    '../video/han-matado-a-kenny-1.mp4',
+    '../video/han-matado-a-kenny-2.mp4',
+    '../video/han-matado-a-kenny-3.mp4',
+    '../video/han-matado-a-kenny-4.mp4',
+]
 
-// const gameOverVideoSrc = document.createElement('source')
-// gameOverVideoSrc.setAttribute('src', './video/han-matado-a-kenny.mp4')
-// gameOverVideoSrc.setAttribute('type', 'video/mp4')
-// gameOverVideo.appendChild(gameOverVideoSrc)
+let randomGameOverVideoIndex = Math.round(Math.random() * 3)
+let videoRandom = gameOverVideosArray[randomGameOverVideoIndex]
+
+gameOverVideo.setAttribute('id', 'Habeis-matado-a-Kenny')
+gameOverVideo.style.position = 'absolute'
+gameOverVideo.style.width = '100%'
+gameOverVideo.style.height = '100%'
+gameOverScreen.appendChild(gameOverVideo)
+
+const gameOverVideoSrc = document.createElement('source')
+gameOverVideoSrc.setAttribute('src', `${videoRandom}`)
+gameOverVideoSrc.setAttribute('type', 'video/mp4')
+gameOverVideo.appendChild(gameOverVideoSrc)
 
 restartButton.onclick = () => {
     Game.restart()
