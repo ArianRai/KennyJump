@@ -28,10 +28,10 @@ gameOverScreen.appendChild(restartButton)
 const gameOverVideo = document.createElement('video')
 
 const gameOverVideosArray = [
-    '../video/han-matado-a-kenny-1.mp4',
-    '../video/han-matado-a-kenny-2.mp4',
-    '../video/han-matado-a-kenny-3.mp4',
-    '../video/han-matado-a-kenny-4.mp4',
+    '/video/han-matado-a-kenny-1.mp4',
+    '/video/han-matado-a-kenny-2.mp4',
+    '/video/han-matado-a-kenny-3.mp4',
+    '/video/han-matado-a-kenny-4.mp4',
 ]
 
 let randomGameOverVideoIndex = Math.round(Math.random() * 3)
