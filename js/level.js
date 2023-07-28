@@ -75,6 +75,10 @@ class Level {
                 playerBottom >= 400 &&
                 playerTop <= 520
             ) {
+                Game.setTop()
+                Game.cleanBoard()
+                Game.createBoard()
+
                 setTimeout(() => {
                     document.body.querySelector('#wii-theme').pause()
                     document.querySelector('#endGame').style.display = 'block'
@@ -98,6 +102,9 @@ class Level {
                     if (this.player.lifesCount > 0) {
                         document.querySelector('#fall').play()
 
+                        this.gameScreen.querySelector('#player').style.transform =
+                            'rotate(-90deg)'
+
                         let count = this.player.lifesCount
                         this.player.lifesCount--
 
@@ -106,6 +113,11 @@ class Level {
                         ).style.backgroundImage = 'url(./img/heart_empty.png)'
 
                         if (this.player.lifesCount === 0) {
+                            this.gameScreen.querySelector('#player').style.transform =
+                                'rotate(-90deg)'
+                            this.gameScreen.querySelector(
+                                '#player'
+                            ).style.backgroundImage = 'url(./img/Kenny-fall-dead.png)'
                             Game.gameOver()
                         }
                     }

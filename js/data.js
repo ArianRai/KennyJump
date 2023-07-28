@@ -1,6 +1,5 @@
 const levelData = [
     {
-        // backGround: `url('./img/ays.jpg')`,
         platforms: [
             {
                 x: -1400,
@@ -146,12 +145,6 @@ const levelData = [
     },
     {
         platforms: [
-            // {
-            //     x: 880,
-            //     y: 550,
-            //     w: 80,
-            //     h: 300,
-            // },
             {
                 x: 1120,
                 y: 900,

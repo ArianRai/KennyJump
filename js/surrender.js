@@ -17,5 +17,5 @@ surrenderButton.style.backgroundRepeat = 'no-repeat'
 document.body.insertBefore(surrenderButton, gameScreen)
 
 surrenderButton.onclick = () => {
-	Game.gameOver()
+    Game.gameOver()
 }
