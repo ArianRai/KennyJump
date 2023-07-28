@@ -40,18 +40,18 @@ const Game = {
     },
 
     setEventListeners() {
-        // addEventListener('click', (e) => {
-        //     const clickX = e.clientX
-        //     const clickY = e.clientY
-        //     const rect = this.gameScreen.getBoundingClientRect()
-        //     const divX = rect.left
-        //     const divY = rect.top
-        //     const offsetX = clickX - divX
-        //     const offsetY = clickY - divY
-        //     this.player.playerPos.x = offsetX
-        //     this.player.playerPos.y = offsetY
-        //     this.player.onGround = false
-        // })
+        addEventListener('click', (e) => {
+            const clickX = e.clientX
+            const clickY = e.clientY
+            const rect = this.gameScreen.getBoundingClientRect()
+            const divX = rect.left
+            const divY = rect.top
+            const offsetX = clickX - divX
+            const offsetY = clickY - divY
+            this.player.playerPos.x = offsetX
+            this.player.playerPos.y = offsetY
+            this.player.onGround = false
+        })
         addEventListener('keyup', (e) => {
             switch (e.code) {
                 case this.keys.UP.code:
@@ -118,7 +118,7 @@ const Game = {
 
         const kennyLogoImg = document.createElement('img')
 
-        kennyLogoImg.setAttribute('src', './../img/logo-game.png')
+        kennyLogoImg.setAttribute('src', './img/logo-game.png')
         kennyLogoImg.setAttribute('id', 'blessedKenny')
         kennyLogoImg.style.width = '400px'
         kennyLogoImg.style.position = 'absolute'
@@ -128,7 +128,7 @@ const Game = {
 
         const controlsImg = document.createElement('img')
 
-        controlsImg.setAttribute('src', './../img/controls.png')
+        controlsImg.setAttribute('src', './img/controls.png')
         controlsImg.setAttribute('id', 'controls')
         controlsImg.style.width = '400px'
         controlsImg.style.position = 'absolute'
