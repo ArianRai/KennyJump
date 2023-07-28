@@ -83,7 +83,7 @@ class Player {
                 this.playerVel.x = this.playerSpeed
             } else if (!this.keys.UP.pressed && this.chargingJump) {
                 if (this.chargedJump >= this.chargedJumpMAX - 1) {
-                    let jumpAudio = new Audio('./../audio/woohoo.mp3')
+                    let jumpAudio = new Audio('./audio/woohoo.mp3')
                     jumpAudio.play()
                 }
                 if (this.keys.LEFT.pressed) {
