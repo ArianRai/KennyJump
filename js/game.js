@@ -40,18 +40,18 @@ const Game = {
     },
 
     setEventListeners() {
-        addEventListener('click', (e) => {
-            const clickX = e.clientX
-            const clickY = e.clientY
-            const rect = this.gameScreen.getBoundingClientRect()
-            const divX = rect.left
-            const divY = rect.top
-            const offsetX = clickX - divX
-            const offsetY = clickY - divY
-            this.player.playerPos.x = offsetX
-            this.player.playerPos.y = offsetY
-            this.player.onGround = false
-        })
+        // addEventListener('click', (e) => {
+        //     const clickX = e.clientX
+        //     const clickY = e.clientY
+        //     const rect = this.gameScreen.getBoundingClientRect()
+        //     const divX = rect.left
+        //     const divY = rect.top
+        //     const offsetX = clickX - divX
+        //     const offsetY = clickY - divY
+        //     this.player.playerPos.x = offsetX
+        //     this.player.playerPos.y = offsetY
+        //     this.player.onGround = false
+        // })
         addEventListener('keyup', (e) => {
             switch (e.code) {
                 case this.keys.UP.code:
